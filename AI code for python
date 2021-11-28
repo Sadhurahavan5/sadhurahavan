@@ -171,23 +171,11 @@ if __name__ == '__main__':
                     codepath5="C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe"
                     os.startfile(codepath5)
 
-                elif "open setting" in query or "sitting" in query:
-                    speak("opening setting sir")
-                    print("opening setting sir")
-                    codepath6="%windir%\\System32\\Control.exe"
-                    os.startfile(codepath6)
-                                            
                 elif "open downloads" in query:
                     speak("opening downloads sir")
                     print("opening downloads sir")
                     codepath7="C:\\Users\\Admin\\Downloads"
-                    os.startfile(codepath7)
-
-                elif "open desktop" in query:
-                    speak("opening desktop sir")
-                    print("opening desktop sir")
-                    codepath8="C:\\Users\\Admin\\Desktop"
-                    os.startfile(codepath8)
+                    os.startfile(codepath6)
                 
                 elif "Open Brave" in query:
                     speak("opening brave sir")
@@ -220,14 +208,6 @@ if __name__ == '__main__':
                     date=datetime.datetime.now().strftime("%D:%M:%Y")
                     speak(date)
                     print(date)
-                    
-                elif 'internet speed' in query:
-                    import speedtest
-                    st = speedtest.Speedtest()
-                    dl = st.download()
-                    up = st.upload()
-                    speak("sir we have {dl} bit per second downloading speed and {up} bit per second uploading speed")
-                    print("sir we have {dl} bit per second downloading speed and {up} bit per second uploading speed")
 
                 elif 'joke' in  query:
                   joke = random.choice(pyjokes.get_jokes())
@@ -266,28 +246,18 @@ if __name__ == '__main__':
                     print("volume mute sir")
 
                 elif 'hi blue' in query:
-                    speak("hi sir , u are fine sir")
-                    print("hi sir , u are fine sir")
+                    speak("hi sir")
+                    print("hi sir")
+                    print("user side",query)
+                    
+                elif 'how are you' in query:
+                    speak("fine sir what about you sir")
+                    print("fine sir what about you sir")
                     print("user side",query)
 
-                elif 'fine blue you' in query:
-                    speak("i am fine sir")
-                    print("i am fine sir")
-                    print("user side",query)
-
-                elif 'dismantal you blue' in query:
-                    speak("no sir i am sorry sir")
-                    print("no sir i am sorry sir")
-                    print("user side", query)
-
-                elif 'what is my name' in query:
-                    speak("you are name is sadhurahavan")
-                    print("you are name is sadhurahava")
-                    print("user side",query)
-
-                elif 'what is you are name' in query:
-                    speak("my name is blue")
-                    print("my name is blue")
+                elif 'fine blue ' in query:
+                    speak("ok sir")
+                    print("ok sir")
                     print("user side",query)
 
                 elif 'project name' in query:
