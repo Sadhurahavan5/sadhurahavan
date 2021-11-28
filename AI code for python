@@ -1,3 +1,4 @@
+#Change the codepath1 to codepath9 disk name 
 from math import e
 import pyttsx3
 import datetime
@@ -174,26 +175,26 @@ if __name__ == '__main__':
                 elif "open downloads" in query:
                     speak("opening downloads sir")
                     print("opening downloads sir")
-                    codepath7="C:\\Users\\Admin\\Downloads"
+                    codepath6="C:\\Users\\Admin\\Downloads"
                     os.startfile(codepath6)
                 
                 elif "Open Brave" in query:
                     speak("opening brave sir")
                     print("opening brave sir")
-                    codepath9= "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
-                    os.startfile(codepath9)
+                    codepath7= "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+                    os.startfile(codepath7)
 
                 elif "open epic games" in query:
                     speak("opening epic games sir")
                     print("opening epic games sir")
-                    codepath10="C:\\Program Files (x86)\\Epic Games\\Launcher\\Portal\\Binaries\\Win32\\EpicGamesLauncher.exe"
-                    os.startfile(codepath10)
+                    codepath8="C:\\Program Files (x86)\\Epic Games\\Launcher\\Portal\\Binaries\\Win32\\EpicGamesLauncher.exe"
+                    os.startfile(codepath8)
 
                 elif "open new project files" in query:
                     speak("opening new project files sir")
                     print("opening new project files sir")
-                    codepath11="C:\\Users\\Admin\\Desktop\\New project files"
-                    os.startfile(codepath11)
+                    codepath9="C:\\Users\\Admin\\Desktop\\New project files"
+                    os.startfile(codepath9)
 
                 elif 'shutdown' in query:
                       speak('good night sir and shut down you are laptop sir')
