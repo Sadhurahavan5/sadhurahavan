@@ -1,0 +1,57 @@
+import pyttsx3
+import speech_recognition as sr
+
+engine=pyttsx3.init('sapi5')
+voices=engine.getProperty('voices')
+engine.setProperty('voice',voices[1].id)
+
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+def Speak(audio):
+    print(F": {audio}")
+    engine.say(audio)
+    engine.runAndWait()
+    print(f" ")
+
+def Takecommand():
+    r=sr.Recognizer()
+    with sr.Microphone() as source:
+        print("listening sir...")
+       
+        r.pause_threshold=1
+        r.adjust_for_ambient_noise(source, duration= 1)
+        audio=r.listen(source)
+    try:
+        
+        print("Wait for  few Moments sir")
+        query=r.recognize_google(audio,language='ta')
+        print("user said",query)
+
+
+    except Exception as e:
+       # print(e)
+        
+        print("say that again please sir")
+    return query
+
+Takecommand()
+
+def TaskExe():
+
+    while True:
+
+        queryTamil = Takecommand()
+
+        if 'வணக்கம்' in queryTamil:
+            speak("வணக்கம் ஐயா, எப்படி இருக்கிறீர்கள்")
+
+        elif 'நான் நன்றாக இருக்கிறேன் blue' in queryTamil:
+            speak("சரி ஐயா")
+
+
+TaskExe()
+
+
+
